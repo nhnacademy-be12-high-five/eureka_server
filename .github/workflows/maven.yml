@@ -61,7 +61,7 @@ jobs:
             
             # 2. 유레카 서버만 쏙 골라서 재시작 (다른 인프라는 건드리지 않음)
             # --no-deps: 의존성 있는 다른 컨테이너를 재시작하지 않음
-            docker-compose -f docker-compose-infra.yml up -d --no-deps eureka_server
+            docker-compose -f docker-compose-infra.yml up -d --no-deps team5_eureka_server
             
             # 3. 미사용 이미지 정리
             docker image prune -f
