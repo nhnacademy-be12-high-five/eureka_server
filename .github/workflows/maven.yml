@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy-eureka:
-    uses: nhnacademy-be12-high-five/.github/.github/workflows/infra-workflow.yml
+    uses: nhnacademy-be12-high-five/.github/.github/workflows/infra-workflow.yml@main
     with:
       service-name: eureka_server
       container-name: team5-eureka-server
