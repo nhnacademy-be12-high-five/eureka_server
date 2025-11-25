@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy-eureka:
-    uses: ./.github/workflows/infra-common.yml
+    uses: ./.github/workflows/infra-workflow.yml
     with:
       service-name: eureka_server
       container-name: team5-eureka-server
