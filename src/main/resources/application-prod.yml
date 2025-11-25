@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-server
+    name: team5_eureka_server
 server:
   port: 8761  # 내부 포트, docker-compose.yml과 맞춰야 함
 
