@@ -1,12 +1,18 @@
+spring:
+  application:
+    name: eureka-server
+server:
+  port: 8761  # 내부 포트, docker-compose.yml과 맞춰야 함
+
 eureka:
   instance:
-    hostname: nhnbook.shop
+    hostname: nhnbook.shop   # 외부 접속용 호스트
     prefer-ip-address: false
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false  # 자신을 Eureka에 등록하지 않음
+    fetch-registry: false        # 다른 Eureka 서버가 없으면 레지스트리 가져오지 않음
     service-url:
-      defaultZone: http://team5-eureka-server:10481/eureka/
+      defaultZone: http://team5-eureka-server:8761/eureka/  # 내부 포트 기준
   server:
     wait-time-in-ms-when-sync-empty: 0
     enable-self-preservation: true
