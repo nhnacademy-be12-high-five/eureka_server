@@ -3,6 +3,10 @@ spring:
     name: team5_eureka_server
 server:
   port: 8761  # 내부 포트, docker-compose.yml과 맞춰야 함
+  tomcat:
+    keep-alive-timeout: 65000  # Nginx(60초)보다 길게 설정
+    connection-timeout: 20000
+    max-keep-alive-requests: 10000
 
 eureka:
   instance:
